@@ -25,8 +25,36 @@
             "detail": "디버거에서 생성된 작업입니다."
         },
         {
+            "label": "execute",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "group": "test"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe 활성 파일 빌드",
+            "command": "C:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "컴파일러: C:\\mingw64\\bin\\g++.exe"
+        },
+        {
             "label":"execute",
-            "command":"${fileDirname}/${fileBasenameNoExtension}.exe",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.exe",
             "group":"test"
         }
     ],
